@@ -84,7 +84,7 @@ angular.module('sheepWeb.service', []).factory('news', function() {
     items: [
       {
         name: "ボール",
-        discription: "球です。本的で奥が深い道具です。基本的に3つ以上を同時に操ります。",
+        discription: "球です。基本的で奥が深い道具です。基本的に3つ以上を同時に操ります。",
         image: "ball.jpg"
       }, {
         name: "リング",

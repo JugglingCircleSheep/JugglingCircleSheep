@@ -32,7 +32,7 @@ angular.module('sheepWeb.service', [])
         url: "img/items/"
       }
       items: [
-        {name:"ボール",discription:"球です。本的で奥が深い道具です。基本的に3つ以上を同時に操ります。",image:"ball.jpg"}
+        {name:"ボール",discription:"球です。基本的で奥が深い道具です。基本的に3つ以上を同時に操ります。",image:"ball.jpg"}
         {name:"リング",discription:"輪っかです。投げたり回したり首にかけたりします。風に弱いので外での使用は難しいです。",image:"ring.jpg"}
         {name:"クラブ",discription:"こん棒です。トス系(投げるタイプのジャグリング)の花形とも言える道具です。回転が付くので操るのは難しいです。複数人でパスしたりもします。",image:"club.jpg"}
         {name:"シガーボックス",discription:"箱です。基本的に3つ同時に使います。外側の2つを持って操ります。想像以上に疲れます。",image:"box.jpg"}

@@ -13,9 +13,9 @@
     ものを投げる「トスジャグリング」、ものを体から離さない「コンタクトジャグリング」、ものを振り回す「スイングジャグリング」……など様々な種類があります。
   h3 多様な道具
   .item.row(ng-repeat-start='item in items')
-    .col-md-4(ng-class='{pull-left: $odd, pull-right: $even}')
+    .col-md-4(ng-class="{'pull-left': $odd, 'pull-right': $even}")
       img.img-circle(ng-src='{{jugglingItem.config.url + item.image}}',width="300", height="300")
-    .col-md-8(ng-class='{pull-left: $even, pull-right: $odd}')
+    .col-md-8
       h3 {{item.name}}
       p(ng-bind-html='item.discription')
   hr(ng-repeat-end)
