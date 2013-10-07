@@ -1,8 +1,15 @@
 @import compass
 @import tips
 
+// red
 // $main_color: desaturate(#e74c3c,10%)
-$main_color: desaturate(#c0392b,10%)
+// $main_color: desaturate(#c0392b,10%)
+// pink
+// $main_color: desaturate(#FF337A ,10%)
+// $main_color: desaturate(#EF0A78 ,10%)
+// $main_color: desaturate(#E23079 ,10%)
+// $main_color: desaturate(#EE018D ,10%)
+$main_color: desaturate(#E23079 ,10%)
 $accent_color: adjust-hue($main_color, 200)
 $base_color: #ecf0f1
 $text_color: #34495e
@@ -14,6 +21,8 @@ body
   +ts-000
 
 a
+  color: $main_color
+strong
   color: $main_color
 // header
 .navbar-wrapper
@@ -152,6 +161,7 @@ hr
   //member
   .member
     padding: 5px 20px
+    text-align: center
     .well
       height: 400px
       overflow-y: scroll
