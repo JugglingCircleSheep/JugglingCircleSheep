@@ -53,8 +53,7 @@ $ grunt
 	* style/ 生成されたcss
 	* view/ AngularJSから読み出されるHTML(コンテンツ)
 
-基本的に`src/`を編集することでWebを編集できます
-
+基本的に`src/`を編集することでWebを編集できます。
 
 ## ToDo
 * PHPメールフォーム
