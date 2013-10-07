@@ -436,13 +436,13 @@ angular.module 'sheepWeb.member', [], ($provide) ->
             name: "かえ"
             item: "ボール、バルーン"
             discription: "生物四天王の一芸身につけたい系女子"
-            image: "7th/skn.png"
+            image: "../shoboon.jpg"
           }
           {
             name: "サキノ"
             item: "コンタクト、クラブ"
             discription: "水色の水晶が似合う男"
-            image: "../shoboon.jpg"
+            image: "7th/skn.png"
           }
           {
             name: "ぼるこふ"
