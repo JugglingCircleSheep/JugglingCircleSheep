@@ -1,0 +1,17 @@
+.modal-dialog
+  .modal-content
+    .modal-header
+      button(type="button",data-dismiss='modal',aria=hidden="true",ng-click='close()').close &times;
+      h4.modal-title {{event.title}}
+    .modal-body
+      {{event.description}} 
+      .time(ng-if='!event.allDay')
+        h4.text-muted 時間
+        p {{event.start | date:"H:mm"}} - {{event.end | date:"H:mm"}}
+      .location(ng-if='event.location')
+        h4.text-muted 場所
+        p {{event.location}}
+    .modal-footer
+      p
+        a.btn.btn-default(target='_blank',href='{{event.url}}') URL
+        a.btn.btn-primary(ng-click='close()') Close

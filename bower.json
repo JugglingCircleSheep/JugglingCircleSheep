@@ -1,0 +1,25 @@
+{
+  "name": "sheep_web",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "dist/components"
+  ],
+  "dependencies": {
+    "angular": "*",
+    "angular-bootstrap": "*",
+    "angular-ui-calendar": "*",
+    "angular-ui-router": "*",
+    "angular-ui-tinymce": "*",
+    "angular-cookies": "*",
+    "angular-sanitize": "*",
+    "angular-animate": "*",
+    "angular-route": "*",
+    "angular-underscore": "*",
+    "fullcalendar": "*",
+    "jquery": "*",
+    "underscore": "*",
+    "json3": "*"
+  }
+}

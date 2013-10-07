@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<div class="jumbotron">
+  <div class="container">
+    <div class="caption">
+      <h1>Member</h1>
+      <p>現役とOB、OG　さらに顧問の先生まで</p>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div id="sidebar" class="col-md-3">
+      <div class="panel panel-default">
+        <div class="panel-heading"><a ui-sref="member.list" ng-class="{active: $state.includes(&quot;member.list&quot;)}">メンバー</a></div>
+        <div class="pnale-body">
+          <ul class="nav">
+            <li ng-repeat="g in generation | orderBy:&quot;-index&quot; | filter:filterGeneration" ng-class="{ active: $state.includes('member.detail') &amp;&amp; $stateParams.generation === g.index }" class="list"><a ui-sref="member.detail({generation:g.index})">{{g.name}}</a></li>
+          </ul>
+        </div>
+      </div><a ng-click="filterGeneration = {}" ng-hide="filterGeneration === {}" class="btn btn-primary btn-xs">OB/OGを表示する</a>
+    </div>
+    <div class="view sub-view col-md-9">
+      <div id="content" ui-view></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" data-dismiss="modal" aria="true" ng-click="close()" class="close">&times;</button>
+      <h4 class="modal-title">{{event.title}}</h4>
+    </div>
+    <div class="modal-body">{{event.description}} 
+      <div ng-if="!event.allDay" class="time">
+        <h4 class="text-muted">時間</h4>
+        <p>{{event.start | date:"H:mm"}} - {{event.end | date:"H:mm"}}</p>
+      </div>
+      <div ng-if="event.location" class="location">
+        <h4 class="text-muted">場所</h4>
+        <p>{{event.location}}</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p><a target="_blank" href="{{event.url}}" class="btn btn-default">URL</a><a ng-click="close()" class="btn btn-primary">Close</a></p>
+    </div>
+  </div>
+</div>

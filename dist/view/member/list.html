@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<h3>メンバー</h3>
+<table class="table">
+  <tbody>
+    <tr>
+      <th colspan="3" class="active">現役</th>
+    </tr>
+    <tr ng-repeat="g in generation | orderBy:&quot;-index&quot; | filter:{active: true}">
+      <th>{{g.name}}</th>
+      <td>({{g.discription}})</td>
+      <td>{{g.num}}名</td>
+    </tr>
+    <tr>
+      <th></th>
+      <th>人数</th>
+      <td>{{active_user}}名</td>
+    </tr>
+    <tr>
+      <th colspan="3" class="active">OB/OG</th>
+    </tr>
+    <tr ng-repeat="g in generation | orderBy:&quot;-index&quot; | filter:{active: false}">
+      <th>{{g.name}}</th>
+      <td>({{g.discription}})</td>
+      <td>{{g.num}}名</td>
+    </tr>
+    <tr>
+      <th></th>
+      <th>人数</th>
+      <td>約{{nonactive_user}}名</td>
+    </tr>
+  </tbody>
+</table>
+<h3>顧問の先生</h3>
+<h4>TAMOTSU
+  <div class="rows">
+    <div class="col-md-6">
+      <h5 class="text-muted">コンタクト　パントマイム</h5>
+      <p>sheep女子の師匠</p>
+      <p>数学（解析）の教授ながらも、ジャグリングもとってもうまい！</p>
+      <p>先生自身もサークルに来ていろいろ教えていただいてます。ありがとうございます！</p>
+    </div>
+    <div class="col-md-6">
+      <div class="frame-container">
+        <iframe width="560" height="315" src="//www.youtube.com/embed/vDnbdUv6uYg" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</h4>

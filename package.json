@@ -1,0 +1,20 @@
+{
+  "name": "sheepWeb",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "grunt"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "jade": "~0.34.0",
+    "coffee-script": "*",
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-contrib-compass": "~0.2.0",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-jade": "*",
+    "bower": "*"
+  }
+}

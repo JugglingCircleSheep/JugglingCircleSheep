@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<div class="jumbotron">
+  <div class="container">
+    <div class="caption">
+      <h1>Juggling</h1>
+      <p>ぼくたちの主な活動内容であるジャグリング、その紹介をしちゃいます！</p>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <h3>ジャグリング</h3>
+  <p>ジャグリングとは、大道芸やサーカスなどで行われてきた「魅せる」技術です。</p>
+  <p>ものを投げる「トスジャグリング」、ものを体から離さない「コンタクトジャグリング」、ものを振り回す「スイングジャグリング」……など様々な種類があります。</p>
+  <h3>多様な道具</h3>
+  <div ng-repeat-start="item in items" class="item row">
+    <div ng-class="{pull-left: $odd, pull-right: $even}" class="col-md-4"><img ng-src="{{jugglingItem.config.url + item.image}}" width="300" height="300" class="img-circle"></div>
+    <div ng-class="{pull-left: $even, pull-right: $odd}" class="col-md-8">
+      <h3>{{item.name}}</h3>
+      <p ng-bind-html="item.discription"></p>
+    </div>
+  </div>
+  <hr ng-repeat-end>
+</div>

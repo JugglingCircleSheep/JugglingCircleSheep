@@ -1,0 +1,36 @@
+!!! 5
+h3 メンバー
+
+table.table
+  tbody
+    tr
+      th(colspan=3).active 現役
+    tr(ng-repeat='g in generation | orderBy:"-index" | filter:{active: true}')
+      th {{g.name}}
+      td ({{g.discription}})
+      td {{g.num}}名
+    tr
+      th
+      th 人数
+      td {{active_user}}名
+    tr
+      th(colspan=3).active OB/OG
+    tr(ng-repeat='g in generation | orderBy:"-index" | filter:{active: false}')
+      th {{g.name}}
+      td ({{g.discription}})
+      td {{g.num}}名
+    tr
+      th
+      th 人数
+      td 約{{nonactive_user}}名
+h3 顧問の先生
+h4 TAMOTSU
+  .rows
+    .col-md-6
+      h5.text-muted コンタクト　パントマイム
+      p sheep女子の師匠
+      p 数学（解析）の教授ながらも、ジャグリングもとってもうまい！
+      p 先生自身もサークルに来ていろいろ教えていただいてます。ありがとうございます！
+    .col-md-6
+      .frame-container
+        iframe(width="560",height="315", src="//www.youtube.com/embed/vDnbdUv6uYg", frameborder="0", allowfullscreen)

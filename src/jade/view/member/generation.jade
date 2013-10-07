@@ -1,0 +1,12 @@
+h3 {{current.name}}
+.row
+  .member.col-md-4.col-sm-6(ng-repeat='member in members')
+    .well
+      img(ng-src='{{url}}{{member.image}}',width="200", alt='{{member.name}}')
+      .caption
+        h4
+          a(ng-click='detail(member.detail)', ng-bind-html='member.name', ng-if='member.detail')
+          span(ng-bind-html='member.name',ng-if='!member.detail')
+        p
+          strong(ng-bind-html='member.item')
+        p(ng-bind-html='member.discription')

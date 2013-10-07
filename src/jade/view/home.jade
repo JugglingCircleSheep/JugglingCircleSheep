@@ -1,0 +1,51 @@
+!!! 5
+#carousel.carousel.slide
+  ol.carousel-indicators
+    li.active(data-target="#carousel", data-slide-to='0')
+    li(data-target="#carousel", data-slide-to='1')
+  .carousel-inner
+    .item.active
+      .frame
+        img(src='img/top/2013_07oze.jpg')
+      .container
+        .carousel-caption
+          h1 ジャグリングサークルSheepとは
+          p
+            「筑波大学ジャグリングサークルSheep」は、筑波大学の芸術系サークル連合に所属するサークルです。
+          p
+            a(ui-sref='about').btn.btn-lg.btn-primary 詳細はこちらから
+    .item
+      .frame
+        img(src='img/top/sheep2012.jpg')
+      .container
+        .carousel-caption
+          h1 学園祭
+          p
+            ジャグリングサークルSheepは学祭期間様々な場所で活動します
+          p
+            a.btn.btn-large.btn-primary(ui-sref='activity') 詳細はこちらから
+  a.left-icon.carousel-control(href="#carousel", data-slide='prev')
+    span.glyphicon.glyphicon-chevron-left
+  a.right-icon.carousel-control(href="#carousel", data-slide="next")
+    span.glyphicon.glyphicon-chevron-right
+.container
+  .row
+    .col-md-12
+      h3 News
+      ul
+        li(ng-repeat='n in news | limitTo: 5')
+          span(ng-bind-html='n.text')
+      h4.text-muted(ng-if='old_news') 過去のニュース
+      ul.old_news(ng-if='old_news')
+        li(ng-repeat='n in news | rest:5')
+          span(ng-bind-html='n.text')
+      p
+
+        a.btn.btn-xs.btn-primary(ng-click='old_news = !old_news', ng-hide='old_news') 過去のニュース
+    .col-md-6
+      h3 Calender
+      #calendar(ui-calendar='calendarOptions',ng-model='eventSources')
+    .col-md-6
+      h3 Twitter
+      a(class="twitter-timeline", href="https://twitter.com/Sheep_juggling", data-widget-id="386862858924871681") @Sheep_juggling からのツイート
+

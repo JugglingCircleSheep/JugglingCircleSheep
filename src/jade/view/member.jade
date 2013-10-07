@@ -1,0 +1,21 @@
+!!! 5
+.jumbotron
+  .container
+    .caption
+      h1 Member
+      p
+        現役とOB、OG　さらに顧問の先生まで
+
+.container
+  .row
+    #sidebar.col-md-3
+      .panel.panel-default
+        .panel-heading
+          a(ui-sref='member.list', ng-class='{active: $state.includes("member.list")}') メンバー
+        .pnale-body
+          ul.nav
+            li.list(ng-repeat='g in generation | orderBy:"-index" | filter:filterGeneration', ng-class="{ active: $state.includes('member.detail') && $stateParams.generation === g.index }")
+              a(ui-sref='member.detail({generation:g.index})'){{g.name}}
+      a.btn.btn-primary.btn-xs(ng-click='filterGeneration = {}',ng-hide='filterGeneration === {}') OB/OGを表示する
+    .view.sub-view.col-md-9
+      #content(ui-view)

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<div id="carousel" class="carousel slide">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel" data-slide-to="1"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="frame"><img src="img/top/2013_07oze.jpg"></div>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>ジャグリングサークルSheepとは</h1>
+          <p>「筑波大学ジャグリングサークルSheep」は、筑波大学の芸術系サークル連合に所属するサークルです。</p>
+          <p><a ui-sref="about" class="btn btn-lg btn-primary">詳細はこちらから</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="frame"><img src="img/top/sheep2012.jpg"></div>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>学園祭</h1>
+          <p>ジャグリングサークルSheepは学祭期間様々な場所で活動します</p>
+          <p><a ui-sref="activity" class="btn btn-large btn-primary">詳細はこちらから</a></p>
+        </div>
+      </div>
+    </div>
+  </div><a href="#carousel" data-slide="prev" class="left-icon carousel-control"><span class="glyphicon glyphicon-chevron-left"></span></a><a href="#carousel" data-slide="next" class="right-icon carousel-control"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>News</h3>
+      <ul>
+        <li ng-repeat="n in news | limitTo: 5"><span ng-bind-html="n.text"></span></li>
+      </ul>
+      <h4 ng-if="old_news" class="text-muted">過去のニュース</h4>
+      <ul ng-if="old_news" class="old_news">
+        <li ng-repeat="n in news | rest:5"><span ng-bind-html="n.text"></span></li>
+      </ul>
+      <p><a ng-click="old_news = !old_news" ng-hide="old_news" class="btn btn-xs btn-primary">過去のニュース</a></p>
+    </div>
+    <div class="col-md-6">
+      <h3>Calender</h3>
+      <div id="calendar" ui-calendar="calendarOptions" ng-model="eventSources"></div>
+    </div>
+    <div class="col-md-6">
+      <h3>Twitter</h3><a href="https://twitter.com/Sheep_juggling" data-widget-id="386862858924871681" class="twitter-timeline">@Sheep_juggling からのツイート</a>
+    </div>
+  </div>
+</div>

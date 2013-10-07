@@ -1,0 +1,13 @@
+
+<h3>{{current.name}}</h3>
+<div class="row">
+  <div ng-repeat="member in members" class="member col-md-4 col-sm-6">
+    <div class="well"><img ng-src="{{url}}{{member.image}}" width="200" alt="{{member.name}}"/>
+      <div class="caption">
+        <h4><a ng-click="detail(member.detail)" ng-bind-html="member.name" ng-if="member.detail"></a><span ng-bind-html="member.name" ng-if="!member.detail"></span></h4>
+        <p><strong ng-bind-html="member.item"></strong></p>
+        <p ng-bind-html="member.discription"></p>
+      </div>
+    </div>
+  </div>
+</div>
